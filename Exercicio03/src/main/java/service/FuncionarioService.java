@@ -11,8 +11,8 @@ public class FuncionarioService {
 	public FuncionarioService() {
 		funcionarioDAO = new FuncionarioDAO();
 		
-		if(!funcionarioDAO.conectar()) {
-			System.out.println("ERRO ao conectar-se ‡ base de dados");
+		if(funcionarioDAO.conectar()) {
+			System.out.println("ERRO ao conectar-se √† base de dados");
 		}
 	}
 	
@@ -87,7 +87,7 @@ public class FuncionarioService {
         	return id;
         } else {
             response.status(404); // 404 Not found
-            return "Produto n„o encontrado.";
+            return "Produto n√£o encontrado.";
         }
 	}
 	
