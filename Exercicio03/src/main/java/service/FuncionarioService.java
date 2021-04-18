@@ -11,9 +11,7 @@ public class FuncionarioService {
 	public FuncionarioService() {
 		funcionarioDAO = new FuncionarioDAO();
 		
-		if(funcionarioDAO.conectar()) {
-			System.out.println("ERRO ao conectar-se à base de dados");
-		}
+		funcionarioDAO.conectar();
 	}
 	
 	public Object add(Request request, Response response) {
